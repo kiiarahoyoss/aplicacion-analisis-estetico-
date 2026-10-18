@@ -73,6 +73,13 @@ Las rutas `/workspace/...` pertenecen al entorno de desarrollo y no son enlaces 
 
 Se incluye `.github/workflows/pages.yml`, con ejecución manual. Después de subir los archivos a GitHub y autorizar su publicación, selecciona **Settings → Pages → Source: GitHub Actions** y ejecuta **Actions → Publicar Derma → Run workflow**. GitHub mostrará la dirección real cuando termine. El sitio incluye el botón **Descargar aplicación ZIP** con un archivo servido desde la propia web.
 
-La publicación incluye los dos PDF originales y sus diapositivas; no contiene respuestas de usuarios, que se guardan en sus navegadores. No se ha ejecutado el despliegue desde esta sesión.
+La publicación incluye los dos PDF originales y sus diapositivas; no contiene respuestas de usuarios, que se guardan en sus navegadores. La versión publicada se encuentra en la rama `gh-pages`, configurada como fuente de GitHub Pages. GitHub confirmó el despliegue correcto del commit `c366380`.
 
 Puedes preparar y verificar los archivos localmente con `python3 tools/build_site.py`; el resultado se guarda en `_site`, ignorado por Git. No necesita dependencias adicionales.
+
+## Aplicación publicada
+
+- Web: https://kiiarahoyoss.github.io/aplicacion-analisis-estetico-/
+- ZIP descargable: https://github.com/kiiarahoyoss/aplicacion-analisis-estetico-/raw/refs/heads/gh-pages/downloads/Derma.zip
+
+El ZIP público se descargó y verificó íntegramente (HTTP 200). GitHub Actions confirmó el despliegue correcto: https://github.com/kiiarahoyoss/aplicacion-analisis-estetico-/actions/runs/39147800082. El acceso directo al dominio de Pages desde la máquina de desarrollo está restringido; las comprobaciones funcionales se realizaron sobre los mismos archivos antes de subirlos. No se ha modificado la restricción de red del entorno para publicar la web.
